@@ -43,7 +43,6 @@ export default {
     {
       dest: `./lib/cli/${presetKey}.js`,
       format: 'cjs',
-      moduleName: 'rollupStarterProject',
     },
   ],
 };

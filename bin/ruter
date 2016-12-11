@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable global-require, no-unused-expressions, no-console */
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.DEV === 'true') {
   require('babel-register');
   require('babel-polyfill');
 
@@ -14,15 +14,15 @@ if (process.env.NODE_ENV !== 'production') {
 const nodeVersion = parseInt(process.versions.node.split('.')[0], 10);
 
 if (nodeVersion >= 6) {
-  require('../lib/node6');
+  require('../lib/cli/node6');
 
   return;
 }
 
 if (nodeVersion >= 4) {
-  require('../lib/node6');
+  require('../lib/cli/node4');
 
   return;
 }
 
-require('../lib/default');
+require('../lib/cli/default');

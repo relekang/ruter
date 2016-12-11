@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Wrapper around the ruter api",
   "main": "lib/index.js",
+  "bin": "bin/ruter",
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
@@ -16,6 +17,13 @@
     "build:cli:node6": "NODE_VERSION=6 ENTRY=src/cli.js rollup -c",
     "build:cli:node4": "NODE_VERSION=4 ENTRY=src/cli.js rollup -c"
   },
+  "files": [
+    "lib/",
+    "bin/",
+    "package.json",
+    "license",
+    "readme.md"
+  ],
   "eslintConfig": {
     "extends": [
       "relekang",
