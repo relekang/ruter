@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-    "flow": "flow-bin",
+    "flow": "flow check",
     "verify": "npm-run-all lint flow test",
     "prepublish": "npm run build",
     "build": "sh -c 'npm run build:clean && npm-run-all --parallel build:*:*'",
