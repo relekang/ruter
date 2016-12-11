@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable global-require, no-unused-expressions, no-console */
+
+if (process.env.NODE_ENV !== 'production') {
+  require('babel-register');
+  require('babel-polyfill');
+
+  require('../src/cli');
+
+  return;
+}
+
+const nodeVersion = parseInt(process.versions.node.split('.')[0], 10);
+
+if (nodeVersion >= 6) {
+  require('../lib/node6');
+
+  return;
+}
+
+if (nodeVersion >= 4) {
+  require('../lib/node6');
+
+  return;
+}
+
+require('../lib/default');
