@@ -10,10 +10,7 @@ const dot = chalk.bold(chalk.blue('·'));
 
 require('yargs')
   .usage('$0 <cmd> [args]')
-  .command('trip [from] [to]', 'welcome ter yargs!', {
-    from: { },
-    to: { },
-  }, ({ from, to }) => {
+  .command('trip [from] [to]', 'Find a trip', ({ from, to }) => {
     ruter.travel({ from, to })
       .then((response) => {
         console.log(
