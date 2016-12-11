@@ -1,5 +1,5 @@
 {
-  "name": "ruter",
+  "name": "@relekang/ruter",
   "version": "0.0.0",
   "description": "Wrapper around the ruter api",
   "main": "lib/index.js",
